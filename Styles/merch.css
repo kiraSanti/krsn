@@ -8,6 +8,7 @@
     padding: 0;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     background-image: url('https://cdn.shopify.com/s/files/1/0724/1505/2001/files/pink8.jpg?v=1739756355');
     background-attachment: fixed;
     background-size: cover;
