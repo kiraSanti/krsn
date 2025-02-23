@@ -1,5 +1,5 @@
-// <![CDATA[
-  var colour="white";
+ // <![CDATA[
+  var colour="#FFFFFF";
   var sparkles=120;
   
   /****************************
@@ -22,32 +22,30 @@
   var tinyy=new Array();
   var tinyv=new Array();
   
-  window.onload=function() { 
-    if (document.getElementById) {
-      var i, rats, rlef, rdow;
-      for (var i=0; i<sparkles; i++) {
-        var rats=createDiv(3, 3);
-        rats.style.visibility="hidden";
-        document.body.appendChild(tiny[i]=rats);
-        starv[i]=0;
-        tinyv[i]=0;
-        var rats=createDiv(5, 5);
-        rats.style.backgroundColor="transparent";
-        rats.style.visibility="hidden";
-        var rlef=createDiv(1, 5);
-        var rdow=createDiv(5, 1);
-        rats.appendChild(rlef);
-        rats.appendChild(rdow);
-        rlef.style.top="2px";
-        rlef.style.left="0px";
-        rdow.style.top="0px";
-        rdow.style.left="2px";
-        document.body.appendChild(star[i]=rats);
-      }
-      set_width();
-      sparkle();
+  window.onload=function() { if (document.getElementById) {
+    var i, rats, rlef, rdow;
+    for (var i=0; i<sparkles; i++) {
+      var rats=createDiv(3, 3);
+      rats.style.visibility="hidden";
+      document.body.appendChild(tiny[i]=rats);
+      starv[i]=0;
+      tinyv[i]=0;
+      var rats=createDiv(5, 5);
+      rats.style.backgroundColor="transparent";
+      rats.style.visibility="hidden";
+      var rlef=createDiv(1, 5);
+      var rdow=createDiv(5, 1);
+      rats.appendChild(rlef);
+      rats.appendChild(rdow);
+      rlef.style.top="2px";
+      rlef.style.left="0px";
+      rdow.style.top="0px";
+      rdow.style.left="2px";
+      document.body.appendChild(star[i]=rats);
     }
-  }
+    set_width();
+    sparkle();
+  }}
   
   function sparkle() {
     var c;
@@ -92,7 +90,7 @@
       tiny[i].style.width="2px";
       tiny[i].style.height="2px";
       star[i].style.visibility="hidden";
-      tiny[i].style.visibility="visible";
+      tiny[i].style.visibility="visible"
     }
   }
   
@@ -166,8 +164,6 @@
     div.style.width=width+"px";
     div.style.overflow="hidden";
     div.style.backgroundColor=colour;
-    div.style.zIndex="10"; // Ensuring sparkles always appear on top
-    return div;
+    return (div);
   }
   // ]]>
-  
