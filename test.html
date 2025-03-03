@@ -17,6 +17,26 @@
 
 <body>
 
+    <!-- INITIAL LOADING SCREEN -->
+    <div id="animationContainer"></div>
+    <script>
+        // Load the external animation HTML file
+        fetch("intro.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("animationContainer").innerHTML = data;
+
+                // Wait for 5 seconds, then replace with main content
+                setTimeout(() => {
+                    document.getElementById("animationContainer").style.display = "none";
+                    document.getElementById("mainContent").style.display = "block";
+                }, 5000);
+            })
+            .catch(error => console.error("Error loading animation:", error));
+    </script>
+
+
+
     <!-- KIRITA ANIMATED LOGO -->
   <div id="kiritaAnimatedLogoContainer">
     <img id="kiritaAnimatedLogo" src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/output-onlinegiftools.gif?v=1740864945" width="12%" height="auto">
