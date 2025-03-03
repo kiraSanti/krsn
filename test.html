@@ -4,63 +4,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/KiraLogoV5.png?v=1736122362"
-        type="image/x-icon">
+    <link rel="icon" href="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/KiraLogoV5.png?v=1736122362" type="image/x-icon">
     <title>KiraSan</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/Styles/home.css">
-
-
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
 </head>
 
 <body>
-
-    <!-- KIRITA ANIMATED LOGO -->
-  <div id="kiritaAnimatedLogoContainer">
-    <img id="kiritaAnimatedLogo" src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/output-onlinegiftools.gif?v=1740864945" width="12%" height="auto">
-  </div>
-
-
-    <!-- PEXELS THUMBNAIL & CURSOR SPARKLES-->
-    <div id="pexelsThumbnailContainer">
-        <img id="pexelsThumbnail" />
-    </div>
-    <script src="/Scripts/PexelsThumbnailnSparkles/pexelsThumbnailnSparkles.js"></script>
-
-
-    <!-- TYPED QUOTES -->
-    <div id="typedtext"></div>
-    <script src="/Scripts/Typewriter/typewriter.js"></script>
-
-    <!-- MENU GIFS -->
-    <div id="gifsContainer">
-
-        <a id="merch" class="mainPageClickableGifs" href="https://kirasanart.com/merch/">
-            <img src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/skull.gif?v=1728538993" width="50"
-                height="50">
-        </a>
-
-
-        <a id="youtube" class="mainPageClickableGifs" href="https://www.youtube.com/@kirasanart" target="_blank">
-            <img src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/Youtube_Logo_Sticker.gif?v=1737335920"
-                width="37" height="37">
-        </a>
-
-
-        <a id="emailUs" class="mainPageClickableGifs" href="mailto:kirasaninfo@gmail.com" target="_blank">
-            <img src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/mailLips.gif?v=1737334183"
-                alt="Description of the image" width="29" height="25">
-        </a>
-
-        <a id="iLoveCoffe" class="mainPageClickableGifs" href="https://buymeacoffee.com/" target="_blank">
-            <img src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/iLoveCoffe.gif?v=1737333228" width="39"
-                height="45">
-        </a>
-
+    <div id="temporaryContent" style="display: none;">
+        <div id="container">
+            <span id="text1"></span>
+            <span id="text2"></span>
+        </div>
+        <svg id="filters">
+            <defs>
+                <filter id="threshold">
+                    <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                                    0 1 0 0 0
+                                    0 0 1 0 0
+                                    0 0 0 255 -140" />
+                </filter>
+            </defs>
+        </svg>
     </div>
 
+    <div id="mainContent" style="display: none;">
+        <!-- KIRITA ANIMATED LOGO -->
+        <div id="kiritaAnimatedLogoContainer">
+            <img id="kiritaAnimatedLogo" src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/output-onlinegiftools.gif?v=1740864945" width="12%" height="auto">
+        </div>
+
+        <!-- PEXELS THUMBNAIL & CURSOR SPARKLES-->
+        <div id="pexelsThumbnailContainer">
+            <img id="pexelsThumbnail" />
+        </div>
+        <script src="/Scripts/PexelsThumbnailnSparkles/pexelsThumbnailnSparkles.js"></script>
+
+        <!-- TYPED QUOTES -->
+        <div id="typedtext"></div>
+        <script src="/Scripts/Typewriter/typewriter.js"></script>
+
+        <!-- MENU GIFS -->
+        <div id="gifsContainer">
+            <a id="merch" class="mainPageClickableGifs" href="https://kirasanart.com/merch/">
+                <img src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/skull.gif?v=1728538993" width="50" height="50">
+            </a>
+            <a id="youtube" class="mainPageClickableGifs" href="https://www.youtube.com/@kirasanart" target="_blank">
+                <img src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/Youtube_Logo_Sticker.gif?v=1737335920" width="37" height="37">
+            </a>
+            <a id="emailUs" class="mainPageClickableGifs" href="mailto:kirasaninfo@gmail.com" target="_blank">
+                <img src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/mailLips.gif?v=1737334183" alt="Description of the image" width="29" height="25">
+            </a>
+            <a id="iLoveCoffe" class="mainPageClickableGifs" href="https://buymeacoffee.com/" target="_blank">
+                <img src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/iLoveCoffe.gif?v=1737333228" width="39" height="45">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Function to show the temporary content
+        function showTemporaryContent() {
+            document.getElementById('temporaryContent').style.display = 'block';
+            document.getElementById('mainContent').style.display = 'none';
+
+            const elts = {
+                text1: document.getElementById("text1"),
+                text2: document.getElementById("text2")
+            };
+
+            const texts = ["Welcome", "to", "Kirasan"];
+            const morphTime = 1;
+            const cooldownTime = 0.25;
+
+            let textIndex = texts.length - 1;
+            let time = new Date();
+            let morph = 0;
+            let cooldown = cooldownTime;
+
+            elts.text1.textContent = texts[textIndex % texts.length];
+            elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+
+            function doMorph() {
+                morph -= cooldown;
+                cooldown = 0;
+
+                let fraction = morph / morphTime;
+
+                if (fraction > 1) {
+                    cooldown = cooldownTime;
+                    fraction = 1;
+                }
+
+                setMorph(fraction);
+            }
+
+            function setMorph(fraction) {
+                elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+                elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+
+                fraction = 1 - fraction;
+                elts.text1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+                elts.text1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+
+                elts.text1.textContent = texts[textIndex % texts.length];
+                elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+            }
+
+            function doCooldown() {
+                morph = 0;
+
+                elts.text2.style.filter = "";
+                elts.text2.style.opacity = "100%";
+
+                elts.text1.style.filter = "";
+                elts.text1.style.opacity = "0%";
+            }
+
+            function animate() {
+                requestAnimationFrame(animate);
+
+                let newTime = new Date();
+                let shouldIncrementIndex = cooldown > 0;
+                let dt = (newTime - time) / 1000;
+                time = newTime;
+
+                cooldown -= dt;
+
+                if (cooldown <= 0) {
+                    if (shouldIncrementIndex) {
+                        textIndex++;
+                    }
+
+                    doMorph();
+                } else {
+                    doCooldown();
+                }
+            }
+
+            animate();
+        }
+
+        // Show the temporary content for 5 seconds
+        showTemporaryContent();
+        setTimeout(() => {
+            document.getElementById('temporaryContent').style.display = 'none';
+            document.getElementById('mainContent').style.display = 'block';
+        }, 5000);
+    </script>
 </body>
 
 </html>
