@@ -22,12 +22,12 @@
     </div>
     
     <script>
+        // Show the loading screen when the page is loaded
+        document.getElementById('loadingScreenInitial').style.display = 'block';
+    
         // Check if the user is navigating back
         if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
-            // If the page is reloaded, show the loading screen
-            document.getElementById('loadingScreenInitial').style.display = 'block';
-    
-            // Hide loading screen after 6.5 seconds
+            // If the page is reloaded, hide the loading screen after 6.5 seconds
             setTimeout(function () {
                 document.getElementById('loadingScreenInitial').style.display = 'none';
             }, 6500);
