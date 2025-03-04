@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/Styles/home.css">
-    
+
 </head>
 
 <body>
@@ -19,6 +19,12 @@
     <div id="loadingScreen">
         <img src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/Screenrecording2025-03-037.46.14PM-ezgif.com-speed.gif?v=1741049377" alt="Loading...">
     </div>
+    <script>
+        // Hide loading screen after 5 seconds and show the main content
+        setTimeout(function() {
+            document.getElementById('loadingScreen').style.display = 'none';
+        }, 6500);
+    </script>
 
     <!-- KIRITA ANIMATED LOGO -->
     <div id="kiritaAnimatedLogoContainer">
@@ -51,12 +57,7 @@
         </a>
     </div>
 
-    <script>
-        // Hide loading screen after 5 seconds and show the main content
-        setTimeout(function() {
-            document.getElementById('loadingScreen').style.display = 'none';
-        }, 6500);
-    </script>
+    
 
 </body>
 
