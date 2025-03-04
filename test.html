@@ -22,17 +22,17 @@
     </div>
     
     <script>
-        // Check if the user has reloaded the page
-        if (!sessionStorage.getItem('hasReloaded')) {
-            // If not, set a flag in sessionStorage to indicate the user has reloaded
-            sessionStorage.setItem('hasReloaded', 'true');
+        // Check if the user is navigating back
+        if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+            // If the page is reloaded, show the loading screen
+            document.getElementById('loadingScreenInitial').style.display = 'block';
     
-            // Hide loading screen after 6.5 seconds and show the main content
+            // Hide loading screen after 6.5 seconds
             setTimeout(function () {
                 document.getElementById('loadingScreenInitial').style.display = 'none';
             }, 6500);
         } else {
-            // If the user has reloaded before, hide the loading screen immediately
+            // If the user is navigating back, hide the loading screen immediately
             document.getElementById('loadingScreenInitial').style.display = 'none';
         }
     </script>
