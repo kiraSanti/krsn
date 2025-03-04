@@ -12,6 +12,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/Styles/home.css">
 
+    <style>
+        #loadingScreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Ensure it covers everything */
+        }
+        #loadingScreen img {
+            width: 150px; /* Adjust size as needed */
+            height: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -47,7 +65,7 @@
 
     <!-- MENU GIFS -->
     <div id="gifsContainer">
-        <a id="merch" class="mainPageClickableGifs" href="https://kirasanart.com/merch/">
+        <a id="merch" class="mainPageClickableGifs" href="https://kirasanart.com/merch/" onclick="showLoadingScreen()">
             <img src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/skull.gif?v=1728538993" width="50"
                 height="50">
         </a>
@@ -67,16 +85,20 @@
 
 
     <!-- LOADING SCREEN -->
-    <!-- <div id="loadingScreen">
-        <img src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/walkingman.gif?v=1739661193"
-            alt="Loading...">
+    <div id="loadingScreen" style="display: none;">
+        <img src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/walkingman.gif?v=1739661193" alt="Loading...">
     </div>
     <script>
-        // Hide loading screen after 5 seconds and show the main content
-        setTimeout(function () {
-            document.getElementById('loadingScreen').style.display = 'none';
-        }, 3300);
-    </script> -->
+        function showLoadingScreen() {
+            // Show the loading screen
+            document.getElementById('loadingScreen').style.display = 'flex';
+
+            // Hide loading screen after 3.3 seconds
+            setTimeout(function () {
+                document.getElementById('loadingScreen').style.display = 'none';
+            }, 3300);
+        }
+    </script>
 
 
 </body>
