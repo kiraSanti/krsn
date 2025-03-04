@@ -28,6 +28,28 @@
         }, 4500);
     </script>
 
+    <!-- LOADING SCREEN -->
+    <div id="loadingScreen">
+        <img src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/walkingman.gif?v=1739661193"
+            alt="Loading...">
+    </div>
+    <script>
+        document.getElementById('loadingScreen').style.display = 'none';
+        document.getElementById('merch').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            var loadingScreen = document.getElementById('loadingScreen');
+            loadingScreen.style.display = 'flex'; // Show the loading screen
+    
+            // Set a timeout to hide the loading screen and navigate to the link
+            setTimeout(function() {
+                loadingScreen.style.display = 'none'; // Hide the loading screen
+                window.location.href = event.target.parentElement.href; // Navigate to the link
+            }, 3000); // 3000 milliseconds = 3 seconds
+        });
+    </script>
+
+
+
     <!-- KIRITA ANIMATED LOGO -->
     <div id="kiritaAnimatedLogoContainer">
         <img id="kiritaAnimatedLogo"
