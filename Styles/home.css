@@ -4,7 +4,7 @@
            /* Source: https://www.cursors-4u.com/cursor/2005/04/22/foo6-11.html */
        }
 
-       #loadingScreen {
+       #loadingScreenInitial {
         position: fixed;
         top: 0;
         left: 0;
@@ -16,7 +16,7 @@
         align-items: center;
         z-index: 9999; /* Ensure it covers everything */
     }
-    #loadingScreen img {
+    #loadingScreenInitial img {
         width: 200px; /* Adjust size as needed */
         height: auto;
     }
