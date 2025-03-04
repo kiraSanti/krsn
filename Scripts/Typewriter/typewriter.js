@@ -6634,4 +6634,4 @@ var quotes = [
   // }
   // );
   
-  setTimeout(typewriter, 4350);
+  setTimeout(typewriter, 4300);

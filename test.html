@@ -73,7 +73,7 @@
 
     <script>
         document.getElementById('merch').addEventListener('click', function (event) {
-            // event.preventDefault(); // Prevent the default link behavior
+            event.preventDefault(); // Prevent the default link behavior
             var loadingScreen = document.getElementById('loadingScreen');
             loadingScreen.style.display = 'flex'; // Show the loading screen
 
