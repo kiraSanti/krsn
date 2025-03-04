@@ -260213,34 +260213,37 @@ const imageUrls = [
 
 
 
-    window.onload=function() { if (document.getElementById) {
-
-        // THUMBNAILS
-       shuffleArrayExceptFirst(imageUrls); // Shuffle once when the page loads, except for the first item
-      showNextImage(); // Show the first image immediately
-      setInterval(showNextImage, displayDuration);
-
-    //   CURSOR SPARKLES
-        var i, rats, rlef, rdow;
-        for (var i=0; i<sparkles; i++) {
-          var rats=createDiv(3, 3);
-          rats.style.visibility="hidden";
-          document.body.appendChild(tiny[i]=rats);
-          starv[i]=0;
-          tinyv[i]=0;
-          var rats=createDiv(5, 5);
-          rats.style.backgroundColor="transparent";
-          rats.style.visibility="hidden";
-          var rlef=createDiv(1, 5);
-          var rdow=createDiv(5, 1);
-          rats.appendChild(rlef);
-          rats.appendChild(rdow);
-          rlef.style.top="2px";
-          rlef.style.left="0px";
-          rdow.style.top="0px";
-          rdow.style.left="2px";
-          document.body.appendChild(star[i]=rats);
-        }
-        set_width();
-        sparkle();
-      }}
+    window.onload = function() {
+        setTimeout(function() {
+            if (document.getElementById) {
+                // THUMBNAILS
+                shuffleArrayExceptFirst(imageUrls); // Shuffle once when the page loads, except for the first item
+                showNextImage(); // Show the first image immediately
+                setInterval(showNextImage, displayDuration);
+    
+                // CURSOR SPARKLES
+                var i, rats, rlef, rdow;
+                for (var i = 0; i < sparkles; i++) {
+                    var rats = createDiv(3, 3);
+                    rats.style.visibility = "hidden";
+                    document.body.appendChild(tiny[i] = rats);
+                    starv[i] = 0;
+                    tinyv[i] = 0;
+                    var rats = createDiv(5, 5);
+                    rats.style.backgroundColor = "transparent";
+                    rats.style.visibility = "hidden";
+                    var rlef = createDiv(1, 5);
+                    var rdow = createDiv(5, 1);
+                    rats.appendChild(rlef);
+                    rats.appendChild(rdow);
+                    rlef.style.top = "2px";
+                    rlef.style.left = "0px";
+                    rdow.style.top = "0px";
+                    rdow.style.left = "2px";
+                    document.body.appendChild(star[i] = rats);
+                }
+                set_width();
+                sparkle();
+            }
+        }, 6500); // Execute the function after 6500 milliseconds
+    };
