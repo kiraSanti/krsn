@@ -22,17 +22,17 @@
     </div>
     
     <script>
-        // Check if the user has visited the site before
-        if (!localStorage.getItem('hasVisited')) {
-            // If not, set a flag in localStorage to indicate the user has visited
-            localStorage.setItem('hasVisited', 'true');
+        // Check if the user has reloaded the page
+        if (!sessionStorage.getItem('hasReloaded')) {
+            // If not, set a flag in sessionStorage to indicate the user has reloaded
+            sessionStorage.setItem('hasReloaded', 'true');
     
             // Hide loading screen after 6.5 seconds and show the main content
             setTimeout(function () {
                 document.getElementById('loadingScreenInitial').style.display = 'none';
             }, 6500);
         } else {
-            // If the user has visited before, hide the loading screen immediately
+            // If the user has reloaded before, hide the loading screen immediately
             document.getElementById('loadingScreenInitial').style.display = 'none';
         }
     </script>
