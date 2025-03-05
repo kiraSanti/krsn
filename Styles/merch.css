@@ -147,6 +147,7 @@
     width: 65%;
     margin: 100px auto;
     gap: 70px 0px;
+    z-index: 10;
   }
   
   .product {
