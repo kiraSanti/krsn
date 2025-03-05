@@ -195,15 +195,15 @@
   /* KIRASAN LETTERS */
   #kirasanLettersContainer {
     position: fixed;
-    bottom: 25px;
-    right: 15px;
+    bottom: 10px;
+    right: 5px;
     /* margin: 25px; */
 }
 
 /* For devices smaller than 600px */
 @media (max-width: 599px) {
     #kirasanLetters {
-        width: 140px;
+        width: 80px;
         height: auto;
     }
 }
@@ -213,7 +213,7 @@
 /* For devices larger than 600px */
 @media (min-width: 600px) {
     #kirasanLetters {
-        width: 150px;
+        width: 90px;
         height: auto;
     }
 }
