@@ -40,6 +40,7 @@
            display: none;
        }
 
+       /* KIRITA ANIMATED LOGO */
        #kiritaAnimatedLogoContainer {
            position: fixed;
            top: 0;
@@ -65,7 +66,7 @@
            }
        }
 
-
+       /* KIRASAN LETTERS */
        #kirasanLettersContainer {
         position: fixed;
         top: 0;
