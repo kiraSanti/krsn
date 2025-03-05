@@ -71,7 +71,7 @@
         position: fixed;
         top: 0;
         right: 0;
-        margin: 25px;
+        /* margin: 25px; */
     }
 
     /* For devices smaller than 600px */
