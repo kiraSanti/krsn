@@ -69,8 +69,8 @@
        /* KIRASAN LETTERS */
        #kirasanLettersContainer {
         position: fixed;
-        top: 0;
-        right: 0;
+        top: 40px;
+        right: 25px;
         /* margin: 25px; */
     }
 
