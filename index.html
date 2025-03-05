@@ -76,10 +76,11 @@
             event.preventDefault(); // Prevent the default link behavior
             var loadingScreen = document.getElementById('loadingScreen');
             loadingScreen.style.display = 'flex'; // Show the loading screen
-            window.location.href = event.target.parentElement.href; // Navigate to the link
+            
 
             // Set a timeout to hide the loading screen and navigate to the link
             setTimeout(function () {
+                window.location.href = event.target.parentElement.href; // Navigate to the link
                 loadingScreen.style.display = 'none'; // Hide the loading screen
                 // window.location.href = event.target.parentElement.href; // Navigate to the link
             }, 2003); // 3000 milliseconds = 3 seconds
