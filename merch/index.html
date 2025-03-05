@@ -24,14 +24,14 @@
 
       <div id="backArrow">
 
-        <script>
+        <!-- <script>
           document.addEventListener('DOMContentLoaded', () => {
             const backArrow = document.getElementById('backArrow');
             backArrow.onclick = () => {
               window.location.href = "https://kirasanart.com/";
             };
           });
-        </script>
+        </script> -->
       </div>
 
     </div>
@@ -54,24 +54,23 @@
 
   </div>
 
-  <!-- LOADING SCREEN -->
   <div id="loadingScreen" style="display: none;">
     <img src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/walkingman.gif?v=1739661193" alt="Loading...">
-</div>
+  </div>
 
-<script>
-    document.getElementById('backArrow').addEventListener('click', function (event) {
-        event.preventDefault(); // Prevent the default link behavior
-        var loadingScreen = document.getElementById('loadingScreen');
-        loadingScreen.style.display = 'flex'; // Show the loading screen
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const backArrow = document.getElementById('backArrow');
+      const loadingScreen = document.getElementById('loadingScreen');
 
-        // Set a timeout to hide the loading screen and navigate to the link
-        setTimeout(function () {
-            loadingScreen.style.display = 'none'; // Hide the loading screen
-            window.location.href = event.target.parentElement.href; // Navigate to the link
-        }, 2003); // 3000 milliseconds = 3 seconds
+      backArrow.onclick = () => {
+        loadingScreen.style.display = 'flex'; // Show loading screen
+        setTimeout(() => {
+          window.location.href = "https://kirasanart.com/"; // Redirect after 2003 milliseconds
+        }, 2003);
+      };
     });
-</script>
+  </script>
 
 </body>
 
