@@ -14,6 +14,17 @@
 
 <body>
 
+  <!-- LOADING SCREEN INITIAL -->
+  <div id="loadingScreen">
+    <img src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/walkingman.gif?v=1739661193" alt="Loading...">
+  </div>
+  <script>
+    // Hide loading screen after 5 seconds and show the main content
+    setTimeout(function () {
+      document.getElementById('loadingScreen').style.display = 'none';
+    }, 2003);
+  </script>
+
   <!-- CURSOR SPARKLES -->
   <script src="/Scripts/Sparkles/cursorSparkles.js"></script>
 
@@ -23,14 +34,14 @@
 
       <div id="backArrow">
 
-        <!-- <script>
+        <script>
           document.addEventListener('DOMContentLoaded', () => {
             const backArrow = document.getElementById('backArrow');
             backArrow.onclick = () => {
               window.location.href = "https://kirasanart.com/merch/";
             };
           });
-        </script> -->
+        </script>
       </div>
     </div>
 
@@ -40,25 +51,6 @@
 
   <script src="/Scripts/BuyButtons/KiraSan - Skull Sculpture in Resin.js"></script>
 
-
-  <!-- LOADING SCREEN -->
-  <div id="loadingScreen" style="display: none;">
-    <img src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/walkingman.gif?v=1739661193" alt="Loading...">
-  </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const backArrow = document.getElementById('backArrow');
-      const loadingScreen = document.getElementById('loadingScreen');
-
-      backArrow.onclick = () => {
-        loadingScreen.style.display = 'flex'; // Show loading screen
-        setTimeout(() => {
-          window.location.href = "https://kirasanart.com/merch/"; // Redirect after 2003 milliseconds
-        }, 2003);
-      };
-    });
-  </script>
 
 
 </body>
