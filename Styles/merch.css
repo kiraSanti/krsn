@@ -16,7 +16,7 @@
     z-index: 9999; /* Ensure it covers everything */
 }
 #loadingScreen img {
-    width: 85px; /* Adjust size as needed */
+    width: 100px; /* Adjust size as needed */
     height: auto;
 }
   
