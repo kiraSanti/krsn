@@ -26,8 +26,13 @@
         <script>
           document.addEventListener('DOMContentLoaded', () => {
             const backArrow = document.getElementById('backArrow');
+            const loadingScreen = document.getElementById('loadingScreen');
+      
             backArrow.onclick = () => {
-              window.location.href = "https://kirasanart.com/merch/";
+              loadingScreen.style.display = 'flex'; // Show loading screen
+              setTimeout(() => {
+                window.location.href = "https://kirasanart.com/"; // Redirect after 2003 milliseconds
+              }, 2003);
             };
           });
         </script>
