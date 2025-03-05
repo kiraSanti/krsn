@@ -260245,5 +260245,5 @@ const imageUrls = [
                 set_width();
                 sparkle();
             }
-        }, 3700); // Execute the function after 6500 milliseconds
+        }, 3500); // Execute the function after 6500 milliseconds
     };
