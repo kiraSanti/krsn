@@ -67,52 +67,22 @@
 
 
     <!-- LOADING SCREEN -->
-
     <div id="loadingScreen" style="display: none;">
         <img src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/walkingman.gif?v=1739661193" alt="Loading...">
     </div>
 
     <script>
+        document.getElementById('merch').addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default link behavior
+            var loadingScreen = document.getElementById('loadingScreen');
+            loadingScreen.style.display = 'flex'; // Show the loading screen
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const loadingScreen = document.getElementById('loadingScreen');
-
-            // Function to show loading screen
-            function showLoadingScreen() {
-                loadingScreen.style.display = 'flex';
-                setTimeout(() => {
-                    loadingScreen.style.display = 'none';
-                }, 2003);
-            }
-
-            // Attach event listeners to all links
-            const links = document.querySelectorAll('a');
-            links.forEach(link => {
-                link.addEventListener('click', function (event) {
-                    // Show loading screen before navigating
-                    showLoadingScreen();
-                });
-            });
-
-            // Optional: Handle back/forward navigation
-            window.addEventListener('popstate', function () {
-                showLoadingScreen();
-            });
+            // Set a timeout to hide the loading screen and navigate to the link
+            setTimeout(function () {
+                loadingScreen.style.display = 'none'; // Hide the loading screen
+                window.location.href = event.target.parentElement.href; // Navigate to the link
+            }, 2003); // 3000 milliseconds = 3 seconds
         });
-
-
-
-        // document.getElementById('merch').addEventListener('click', function (event) {
-        //     event.preventDefault(); // Prevent the default link behavior
-        //     var loadingScreen = document.getElementById('loadingScreen');
-        //     loadingScreen.style.display = 'flex'; // Show the loading screen
-
-        //     // Set a timeout to hide the loading screen and navigate to the link
-        //     setTimeout(function () {
-        //         loadingScreen.style.display = 'none'; // Hide the loading screen
-        //         window.location.href = event.target.parentElement.href; // Navigate to the link
-        //     }, 2003); // 3000 milliseconds = 3 seconds
-        // });
     </script>
 
 
