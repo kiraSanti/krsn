@@ -173,7 +173,7 @@ iframe[name="frame-toggle"] {
   /* KIRASAN LETTERS */
   #kirasanLettersContainer {
     position: fixed;
-    bottom: 10px;
+    bottom: 5px;
     right: 5px;
     /* margin: 25px; */
 }
