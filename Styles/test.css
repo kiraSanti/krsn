@@ -151,12 +151,13 @@
 
        #pexelsText {
            position: fixed;
-           left: 50px;
+           left: 44px;
            bottom: 9px;
            margin: 0px;
-           font-size: 8px;
+           font-size: 6px;
            /* text-align: center; */
-           /* mix-blend-mode: difference; */
+           color: white;
+           mix-blend-mode: difference;
            font-family: "Oi", serif;
        }
 
