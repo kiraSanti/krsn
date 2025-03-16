@@ -155,8 +155,8 @@
            bottom: 9px;
            margin: 0px;
            font-size: 8px;
-           text-align: center;
-           mix-blend-mode: difference;
+           /* text-align: center; */
+           /* mix-blend-mode: difference; */
            font-family: "Oi", serif;
        }
 
