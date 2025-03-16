@@ -260052,9 +260052,9 @@ const imageUrls = [
       }
       const nextImage = imageUrls[currentIndex];
       imageElement.src = nextImage.large2x;
-      imageElement.onclick = () => {
-        window.open(nextImage.url, '_blank'); // Opens the URL in a new tab
-      };
+    //   imageElement.onclick = () => {
+    //     window.open(nextImage.url, '_blank'); // Opens the URL in a new tab
+    //   };
       currentIndex++;
     }
 
