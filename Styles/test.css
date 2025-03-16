@@ -151,14 +151,15 @@
 
        #pexelsText {
            position: fixed;
-           left: 44px;
-           bottom: 9px;
+           left: 10px;
+           bottom: 0px;
            margin: 0px;
-           font-size: 16px;
+           font-size: 9px;
            /* text-align: center; */
-           color: white;
-           mix-blend-mode: difference;
+           color: black;
+           /* mix-blend-mode: difference; */
            font-family: "UnifrakturMaguntia", cursive;
+           /* display: none; */
        }
 
 
