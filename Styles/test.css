@@ -152,9 +152,9 @@
        #pexelsText {
            position: fixed;
            left: 50px;
-           bottom: 7.5px;
+           bottom: 7px;
            margin: 0px;
-           font-size: 9px;
+           font-size: 8px;
            /* text-align: center; */
            color: black;
            /* mix-blend-mode: difference; */
