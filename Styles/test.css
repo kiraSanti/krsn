@@ -151,9 +151,9 @@
 
        #pexelsText {
         position: fixed;
-        left: 0px;
-           bottom: 0px;
-        margin: 10px;
+        left: 50px;
+           bottom: 12px;
+        margin: 0px;
         font-size: xx-small;
 
        }
