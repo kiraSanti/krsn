@@ -1,0 +1,89 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png"
+    href="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/output-onlinegiftools.gif?v=1740864945">
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&icon_names=arrow_back" />
+
+  <link rel="stylesheet" href="/Styles/merch.css">
+  <title>KiraSan</title>
+
+
+</head>
+
+<body>
+
+  <!-- LOADING SCREEN INITIAL -->
+  <div id="loadingScreen">
+    <img src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/walkingman.gif?v=1739661193" alt="Loading...">
+  </div>
+  <script>
+    // Hide loading screen after 5 seconds and show the main content
+    setTimeout(function () {
+      document.getElementById('loadingScreen').style.display = 'none';
+    }, 1600);
+  </script>
+
+  <!-- CURSOR SPARKLES -->
+  <script src="/Scripts/Sparkles/cursorSparkles.js"></script>
+
+  <div id="announcementBar">
+
+    <div id="backArrowContainer">
+
+      <div id="backArrow">
+
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const backArrow = document.getElementById('backArrow');
+            backArrow.onclick = () => {
+              window.location.href = "https://kirasanart.com/";
+            };
+          });
+        </script>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="productsContainer">
+
+    <div class="product">
+      <a href="https://kirasanart.com/merch/KiraSan%20-%20Skull%20Sculpture%20in%20Resin/" class="productLink">
+        <div class="imageContainer">
+          <img src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/skull.gif?v=1740198995" alt=""
+            class="productImage">
+        </div>
+      </a>
+    </div>
+
+    <div class="product">
+      <a href="https://kirasanart.com/merch/test" class="productLink">
+        <div class="imageContainer">
+          <img src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/skull.gif?v=1740198995" alt=""
+            class="productImage">
+        </div>
+      </a>
+    </div>
+
+    <!-- Do not delete -->
+    <div class="product"></div>
+    <!-- Do not delete -->
+
+  </div>
+
+  <!-- KIRASAN LETTERS -->
+  <div id="kirasanLettersContainer">
+    <img id="kirasanLetters" src="https://cdn.shopify.com/s/files/1/0724/1505/2001/files/Kirasan.svg?v=1741141726"
+      width="37%" height="auto">
+  </div>
+
+
+</body>
+
+</html>
